@@ -1,0 +1,19 @@
+<div class="addowner">
+  <div class="example-small-box mat-elevation-z4">
+    <form class="example-form">
+      <h3>添加用户</h3>
+      <mat-form-field class="example-full-width">
+        <input matInput name="oname" [(ngModel)] = "owner.name"  placeholder="客户姓名" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput name="oaddress" [(ngModel)] = "owner.address"  placeholder="住址" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput required name="otelephone"[(ngModel)] = "owner.telephone" placeholder="电话号码">
+      </mat-form-field>
+      <button mat-raised-button type="submit" (click)="addowner()" color="primary">增加客户</button>
+    </form>
+  </div>
+</div>

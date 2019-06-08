@@ -1,0 +1,59 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-small-box, .example-large-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-large-box{
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.example-small-box {
+  height: 350px;
+  width: 70%;
+}
+.petdetail{
+  background-size: cover;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+table {
+  margin: auto;
+  width: 80%;
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top:30px;
+}
+.mat-accordion{
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.example-box {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}

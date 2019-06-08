@@ -1,0 +1,22 @@
+
+
+<mat-toolbar color="primary" class="demo-app-header">
+  <button mat-icon-button (click)="sideNav.toggle()">
+    <mat-icon>{{ sideNav.opened ? 'close' : 'menu' }}</mat-icon>
+  </button>
+  <span>宠物医院</span>
+  <!-- 在这之后的都会被推到右边去 -->
+  <span class="toolbar-seprator"></span>
+  <div style="font-size: 15px">当前在线：{{name}}</div>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="logout()">退出登录</button>
+  </mat-menu>
+
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" #sideNav><app-tree></app-tree></mat-sidenav>
+  <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+</mat-sidenav-container>

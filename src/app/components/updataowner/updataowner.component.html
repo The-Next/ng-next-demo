@@ -1,0 +1,33 @@
+<div class="updataowner">
+  <div class="example-small-box mat-elevation-z4">
+    <form class="example-form">
+      <h3>用户信息</h3>
+      <mat-form-field class="example-full-width">
+        <input matInput readonly="{{isLinear}}" name="oname" [(ngModel)]="owner.name" placeholder="客户姓名" required>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput readonly="{{isLinear}}" name="oaddress" [(ngModel)]="owner.address" placeholder="客户居住地址">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input matInput readonly="{{isLinear}}" name="otelephone" [(ngModel)]="owner.telephone" placeholder="客户电话">
+      </mat-form-field>
+
+      <mat-slide-toggle (change)="isLinear = !isLinear">允许修改</mat-slide-toggle>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button type="submit" (click)="updataowner()" color="primary">更新</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary" routerLink="/tool/addpet/{{owner.id}}">添加宠物</button>
+    </form>
+  </div>
+  <div class="example-large-box mat-elevation-z4">
+    <h3>用户宠物信息</h3>
+    <div class="mater">
+    <div *ngFor="let i of pets">
+      <app-material [pet]="i"></app-material>
+    </div>
+  </div>
+  </div>
+
+</div>

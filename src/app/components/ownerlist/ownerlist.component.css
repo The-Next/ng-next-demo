@@ -1,0 +1,33 @@
+/* Structure */
+table {
+  margin: auto;
+  width: 80%;
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top:30px;
+}
+
+.tb{
+  margin: auto;
+  width: 80%;
+}
+
+.mat-form-field {
+  align-content: center;
+  margin: auto;
+  font-size: 14px;
+  width: 20%;
+}
+
+.owner{
+  margin: auto;
+  background-color: white;
+  height: 100%;
+}
+
+.form{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}

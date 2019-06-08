@@ -1,0 +1,42 @@
+/* Structure */
+table {
+  margin: auto;
+  width: 80%;
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top:30px;
+}
+
+.mat-form-field {
+  align-content: center;
+  margin: auto;
+  font-size: 14px;
+  width: 20%;
+}
+
+.vets{
+  margin: auto;
+  background-color: white;
+  height: 100%;
+}
+.dis{
+  display: inline;
+}
+.form{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.mat-accordion{
+  width: 70%;
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+.accordion{
+  display:flex;
+  justify-content:center;
+  align-items:center
+}

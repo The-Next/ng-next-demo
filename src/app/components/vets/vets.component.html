@@ -1,0 +1,58 @@
+<div class="vets">
+  <div class="form">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+  <div class="accordion">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            添加医师和特长
+          </mat-panel-title>
+          <mat-panel-description>
+            填写医师姓名和特长名称
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+          <input [(ngModel)]="spset.vname" matInput placeholder="vet name">
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+          <input [(ngModel)]="spset.sname" matInput placeholder="spectalties name">
+        </mat-form-field>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="add()" color="primary" >添加</button>
+      </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" mat-align-table="center">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> 姓名 </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="specialtiesList">
+      <th mat-header-cell *matHeaderCellDef> 特长 </th>
+      <td mat-cell *matCellDef="let element"> <div class="dis" *ngFor="let i of element.specialtiesList">{{i.name}}&nbsp;&nbsp;</div> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

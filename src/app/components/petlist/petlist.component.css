@@ -1,0 +1,46 @@
+.petlist{
+  background-size: cover;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.mater{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-small-box, .example-large-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-large-box{
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.example-small-box {
+  height: 100px;
+  width: 70%;
+}

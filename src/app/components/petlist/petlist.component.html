@@ -1,0 +1,28 @@
+<div class="petlist">
+  <div class="example-small-box mat-elevation-z4">
+    <form class="example-form">
+      <h3>根据类型筛选</h3>
+      <mat-form-field>
+
+        <mat-select placeholder="animal type" [(ngModel)]="typeid" [formControl]="animalControl" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let t of type" [value]="t.id">
+            {{t.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="animalControl.hasError('required')">选择一个类型</mat-error>
+        <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+      </mat-form-field>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary" (click)="getpetbytype()" >查询种类</button>
+    </form>
+  </div>
+  <div class="example-large-box mat-elevation-z4">
+    <h3>宠物列表</h3>
+    <div class="mater">
+      <div *ngFor="let i of pets">
+        <app-material [pet]="i"></app-material>
+      </div>
+    </div>
+  </div>
+</div>
